@@ -1,0 +1,41 @@
+<div class="conteudo">
+    <div class="menu">
+        <div class="btn btn-primary" routerLink="/aplicar">
+            Aplicar
+        </div>
+        <div class="btn-dark">
+            Editar
+        </div>
+        <div class="btn btn-primary" routerLink="/conjuntos">
+            Conjuntos
+        </div>
+        <div class="btn btn-primary" routerLink="/cards">
+            Cards
+        </div>
+    </div>
+    <select name="conjuntos" id="" class="form-control conjunto" (change)="onChange($event.target.value)">
+        <option *ngFor="let conjunto of conjuntos" [value]="conjunto.id">{{conjunto.nome}}</option>
+    </select>
+    <textarea class="topo" readonly [(ngModel)]="frente"></textarea>
+    <textarea class="meio" readonly [(ngModel)]="tras"></textarea>
+    <div class="status">
+        <div>Total de cartas: <span class="info" id="totalCards" [innerHTML]="cards.length"></span></div>
+        <div>Tempo para Lembrar: <span class="info" [innerHTML]="tpl"></span><span class="info"> s</span></div>
+    </div>
+    <div class="botoes">
+        <div class="resposta btn btn-dark" (click)="mostrarResposta()">
+            Resposta
+        </div>
+        <div class="rating">
+            <div class="btn btn-danger" (click)="Dificil()">
+                Difícil
+            </div>
+            <div class="btn btn-primary" (click)="Bom()">
+                Bom
+            </div>
+            <div class="btn btn-success" (click)="Facil()">
+                Fácil
+            </div>
+        </div>
+    </div>
+</div>

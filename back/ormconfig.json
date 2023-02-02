@@ -1,0 +1,19 @@
+[{
+    "name": "devop",
+    "type": "sqlite",
+    "database": "database.db",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+        "src/entity/*.ts"
+    ]
+}, {
+    "name": "production",
+    "type": "sqlite",
+    "database": "../../../../database.db",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+        "resources/app/server/entity/*.js"
+    ]
+}]

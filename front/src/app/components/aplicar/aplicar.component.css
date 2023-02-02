@@ -1,0 +1,60 @@
+.conteudo {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "menu conjunto conjunto conjunto conjunto" "menu topo topo topo topo" "menu topo topo topo topo" "menu topo topo topo topo" "menu topo topo topo topo" "menu meio meio meio meio" "menu meio meio meio meio" "menu meio meio meio meio" "menu meio meio meio meio" "menu botoes botoes botoes botoes";
+}
+
+.conjunto {
+    grid-area: conjunto;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.menu>.btn {
+    width: 100%;
+    padding: 15px;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #375a7f;
+}
+
+.topo {
+    grid-area: topo;
+}
+
+.meio {
+    grid-area: meio;
+}
+
+.meio,
+.topo {
+    border: 0.5px solid #000;
+}
+
+.botoes {
+    grid-area: botoes;
+    display: grid;
+    grid-template-areas: "btn-resposta" "btn-rating";
+    width: 100%;
+    height: 100%;
+}
+
+.resposta.btn {
+    grid-area: btn-resposta;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    border-radius: 0px;
+}
+
+.rating .btn {
+    grid-area: btn-rating;
+    height: 100%;
+    width: 33.33%;
+    padding: 15px;
+    border-radius: 0px;
+}

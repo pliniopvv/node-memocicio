@@ -1,0 +1,19 @@
+<div class="conteudo">
+    <textarea class="topo" [(ngModel)]="frente"></textarea>
+    <textarea class="meio" [(ngModel)]="tras"></textarea>
+    <div class="botoes">
+        <div class="btn btn-primary" (click)="salvar()">
+            Salvar
+        </div>
+        <div *ngIf="retorno.sucesso">
+            <div class="alert alert-success">
+                Conjunto {{ nome_copy }} alterado com sucesso!
+            </div>
+        </div>
+        <div *ngIf="retorno.error">
+            <div class="alert alert-danger">
+                Erro ao criar o conjunto {{ nome_copy }}! Contate o desenvolvedor!
+            </div>
+        </div>
+    </div>
+</div>

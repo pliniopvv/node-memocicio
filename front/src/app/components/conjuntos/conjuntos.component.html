@@ -1,0 +1,50 @@
+<div class="conteudo">
+    <div class="menu">
+        <div class="btn-dark text-center">
+            Conjuntos
+        </div>
+        <div class="btn btn-primary" (click)="changeView('adicionar')">
+            Novo
+        </div>
+        <div class="btn btn-primary" (click)="changeView('default')">
+            Lista
+        </div>
+        <div class="btn btn-light" routerLink="/aplicar">
+            Voltar
+        </div>
+        <!-- <div class="btn-dark text-center">
+            Ações
+        </div>
+        <div class="btn btn-primary">
+            Salvar
+        </div>
+        <div class="btn btn-primary">
+            Limpar
+        </div> -->
+    </div>
+    <div class="acoes">
+        <div *ngIf="action == 'default'">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Ações</th>
+                </tr>
+                <tr *ngFor="let conjunto of conjuntos">
+                    <td>{{conjunto.id}}</td>
+                    <td>{{conjunto.nome}}</td>
+                    <td>
+                        <i class="pi pi-pencil" (click)="editar(conjunto)"></i>
+                        <!-- <i class="pi pi-trash" (click)="deletar(conjunto)"></i> -->
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div *ngIf="action == 'adicionar'">
+            <app-adicionar></app-adicionar>
+        </div>
+        <div *ngIf="action == 'editar'">
+            <app-editar [conjunto]="editing"></app-editar>
+        </div>
+    </div>
+</div>

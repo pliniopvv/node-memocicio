@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="form-group">
+        <div class="row">
+            <div class="col">
+                <label class="form-label">Nome do Conjunto:</label>
+                <input type="text" class="form-control" [(ngModel)]="nome">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn btn-primary" (click)="salvar()">
+                    Salvar
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="retorno.sucesso">
+        <div class="alert alert-success">
+            Conjunto {{ nome_copy }} criado com sucesso!
+        </div>
+    </div>
+    <div *ngIf="retorno.error">
+        <div class="alert alert-danger">
+            Erro ao criar o conjunto {{ nome_copy }}! Contate o desenvolvedor!
+        </div>
+    </div>
+</div>

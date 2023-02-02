@@ -1,0 +1,1 @@
+xcopy "./memo-cicio-win32-x64" "C:\Users\GanGss\Documents\@\@APPS\MemoCicio\NodeJs" /S /V /Y /J /C

@@ -1,0 +1,27 @@
+<div class="conteudo">
+    <textarea class="topo" [(ngModel)]="frente"></textarea>
+    <textarea class="meio" [(ngModel)]="tras"></textarea>
+    <div class="botoes">
+        <div class="row">
+            <div class="col">
+                <div class="btn btn-primary" (click)="salvar()">
+                    Salvar
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div *ngIf="retorno.sucesso">
+                    <div class="alert alert-success">
+                        Card criado com suceso!
+                    </div>
+                </div>
+                <div *ngIf="retorno.error">
+                    <div class="alert alert-danger">
+                        Erro ao criar o card! Contate o desenvolvedor!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

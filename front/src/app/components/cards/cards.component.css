@@ -1,0 +1,66 @@
+.conteudo {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    /* grid-template-areas: "menu listacnj listacnj listacnj listacnj" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes" "menu acoes acoes acoes acoes"; */
+    grid-template-areas: "menu acoes acoes acoes acoes acoes ";
+}
+
+.listacnj {
+    width: 100%;
+    height: 15vh;
+    cursor: pointer;
+}
+
+
+/* .conjunto {
+    grid-area: conjunto;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+} */
+
+.menu>.btn {
+    width: 100%;
+    padding: 15px;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #375a7f;
+}
+
+.acoes {
+    grid-area: acoes;
+    width: 100%;
+    height: 100%;
+}
+
+.acoes table {
+    width: 100%;
+}
+
+.acoes table th {
+    background-color: #375a7f;
+    color: #fff;
+}
+
+.acoes table tr:nth-child(even) {
+    background-color: rgb(209, 255, 212);
+}
+
+.acoes table .pi {
+    background-color: #5389c4;
+    padding: 3px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.acoes table .pi:hover {
+    background-color: #60a0e6;
+}
+
+.tab_id,
+.tab_acoes {
+    width: 50px;
+}

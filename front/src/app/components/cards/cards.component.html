@@ -1,0 +1,60 @@
+<div class="conteudo">
+    <div class="menu">
+        <div class="btn-dark text-center">
+            Cards
+        </div>
+        <div class="btn btn-primary" (click)="changeView('adicionar')">
+            Novo
+        </div>
+        <div class="btn btn-primary" (click)="changeView('default')">
+            Lista
+        </div>
+        <div class="btn btn-light" routerLink="/aplicar">
+            Voltar
+        </div>
+        <!-- <div class="btn-dark text-center">
+            Ações
+        </div>
+        <div class="btn btn-primary">
+            Salvar
+        </div>
+        <div class="btn btn-primary">
+            Limpar
+        </div> -->
+    </div>
+    <div class="acoes">
+        <div *ngIf="action == 'default'">
+            <select class="form-control conjunto listacnj" (change)="onChange($event.target.value)">
+                <option *ngFor="let conjunto of conjuntos" [value]="conjunto.id">{{conjunto.nome}}</option>
+            </select>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Frente</th>
+                    <th>Ações</th>
+                </tr>
+                <tr *ngFor="let card of cards">
+                    <td class="tab_id">{{card.id}}</td>
+                    <td>{{card.frente}}</td>
+                    <td class="tab_acoes">
+                        <i class="pi pi-pencil" (click)="editar(card)"></i>
+                        <!-- <i class="pi pi-trash" (click)="deletar(card)"></i> -->
+                    </td>
+                </tr>
+            </table>
+            <div *ngIf="cards?.length == 0">Não há cards neste conjunto!</div>
+        </div>
+        <div *ngIf="action == 'adicionar'">
+            <!-- <select class="form-control conjunto listacnj" (change)="onChange($event.target.value)">
+                <option *ngFor="let conjunto of conjuntos" [value]="conjunto.id">{{conjunto.nome}}</option>
+            </select> -->
+            <app-adicionar [conjunto]="cnjSelected"></app-adicionar>
+        </div>
+        <div *ngIf="action == 'editar'">
+            <!-- <select class="form-control conjunto listacnj" (change)="onChange($event.target.value)">
+                <option *ngFor="let conjunto of conjuntos" [value]="conjunto.id">{{conjunto.nome}}</option>
+            </select> -->
+            <app-editar [editing]="editing"></app-editar>
+        </div>
+    </div>
+</div>

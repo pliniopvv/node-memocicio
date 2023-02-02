@@ -1,0 +1,36 @@
+.row {
+    margin-bottom: 5px;
+}
+
+.conteudo {
+    width: 100%;
+    height: 85vh;
+    display: grid;
+    grid-template-areas: "topo topo topo topo" "topo topo topo topo" "topo topo topo topo" "topo topo topo topo" "meio meio meio meio" "meio meio meio meio" "meio meio meio meio" "meio meio meio meio" "botoes botoes botoes botoes";
+}
+
+.topo {
+    grid-area: topo;
+}
+
+.meio {
+    grid-area: meio;
+}
+
+.meio,
+.topo {
+    border: 0.5px solid #000;
+}
+
+.botoes {
+    grid-area: botoes;
+}
+
+.botoes .btn {
+    /* height: 100%;
+    width: 100%; */
+    /* padding: 15px;
+    border-radius: 0px; */
+    margin-top: 15px;
+    margin-left: 15px;
+}
