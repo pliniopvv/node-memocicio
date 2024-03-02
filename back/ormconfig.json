@@ -10,10 +10,20 @@
 }, {
     "name": "production",
     "type": "sqlite",
-    "database": "../../../../database.db",
+    "database": "../../../database.db",
     "synchronize": false,
     "logging": false,
     "entities": [
         "resources/app/server/entity/*.js"
+    ]
+},
+{
+    "name": "here",
+    "type": "sqlite",
+    "database": "database.db",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+        "dist/entity/*.js"
     ]
 }]
